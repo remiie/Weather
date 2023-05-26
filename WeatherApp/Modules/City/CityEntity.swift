@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+struct ForecastResponse: Decodable {
+    let list: [CityEntity]
+}
+struct CityEntity: Decodable {
+    let dt: Int?
+    let dt_txt: String?
+    let main: WeatherEntity
+}
+
+struct WeatherByDate {
+    var today: [CityEntity]
+    var threeDays: [CityEntity]
+    var week: [CityEntity]
+}
+

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WeatherCell: UITableViewCell {
+final class WeatherCell: UITableViewCell {
     
     private let cityLabel: UILabel = {
         let label = UILabel()
@@ -28,8 +28,8 @@ class WeatherCell: UITableViewCell {
     private let containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .systemGray6
-        view.layer.borderWidth = 1
+        view.backgroundColor = .white
+        view.layer.borderWidth = 0.5
         view.layer.borderColor = UIColor.systemGray4.cgColor
         view.layer.cornerRadius = 20
         return view

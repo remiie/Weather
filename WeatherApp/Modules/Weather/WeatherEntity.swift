@@ -21,5 +21,3 @@ struct WeatherResponse: Decodable {
     let name: String
     let main: WeatherEntity
 }
-
-//ограничение на 10 городов, удалить первый добавить последний

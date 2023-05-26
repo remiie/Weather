@@ -15,7 +15,7 @@ protocol WeatherViewInput: AnyObject {
    
 }
 
-class WeatherView: UIViewController, WeatherViewInput {
+final class WeatherView: UIViewController, WeatherViewInput {
     var presenter: WeatherViewOutput?
     private let errorLabel = UILabel()
     private lazy var tableView: UITableView = {
@@ -32,7 +32,7 @@ class WeatherView: UIViewController, WeatherViewInput {
         return searchBar
     }()
     
-    let refreshControl = UIRefreshControl()
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
